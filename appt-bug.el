@@ -1,10 +1,8 @@
-;; mail-bug.el --- a purely IMAP based email client for EMACS
+;; appt-bug.el ---
 
-;; Copyright (C) 2001, 2002 Tapsell-Ferrier Limited
-;; Copyright (C) 2012 Philippe Coatmeur
-;; URL: https://github.com/xaccrocheur/mail-bug/
+;; Copyright (C) 2013 Philippe Coatmeur
+;; URL: https://github.com/xaccrocheur/appt-bug/
 
-;; Author: Nic Ferrier <nferrier@tapsellferrier.co.uk>
 ;; Author: Philippe CM http://stackoverflow.com/users/539797/philippe-cm
 ;; Keywords: mail
 ;; Version 0.6b
@@ -26,13 +24,14 @@
 ;; Free Software Foundation, Inc., 59 Temple Place - Suite 330,
 ;; Boston, MA 02111-1307, USA.
 
-;;; Commentary:
-
 (require 'appt)
 (setq org-agenda-include-diary t)
 (setq appt-time-msg-list nil)
 (org-agenda-to-appt)
 
+(defun testouille ()
+  (interactive)
+  (message "plopouz"))
 
 (defadvice org-agenda-redo (after org-agenda-redo-add-appts)
   "Pressing `r' on the agenda will also add appointments."
